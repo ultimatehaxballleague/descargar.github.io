@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UHL Client — Ultimate HaxBall League</title>
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121823;
+      --primary: #3aa6ff;
+      --accent: #1f6feb;
+      --text: #e6eaf0;
+      --muted: #9aa4b2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(1200px 600px at top, #111827, var(--bg));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 32px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #141a2a, var(--card));
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.05);
+    }
+
+    /* 🔥 Banner animado */
+    .banner {
+      width: 100%;
+      height: 220px;
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 1rem;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: .95rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+
+    .feature span {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .download {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .download a {
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 18px 36px;
+      border-radius: 16px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: .4px;
+      box-shadow: 0 14px 35px rgba(58,166,255,.4);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .download a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(58,166,255,.5);
+    }
+
+    .note {
+      font-size: .85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: .8rem;
+      color: #7f8a99;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 160px;
+      }
+      .content {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <!-- 🎬 Banner animado -->
+      <div class="banner">
+        <img src="banner.gif" alt="Ultimate HaxBall League Banner">
+      </div>
+
+      <div class="content">
+
+        <div class="header">
+          <img src="logo.png" alt="UHL Logo" class="logo">
+          <div>
+            <div class="title">UHL Client</div>
+            <div class="subtitle">Cliente oficial de Ultimate HaxBall League (PC)</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>¿Qué es UHL Client?</h2>
+          <p>
+            UHL Client es un cliente de escritorio para jugar HaxBall desde un entorno
+            dedicado, pensado para jugadores de liga que buscan una experiencia más
+            cómoda, ordenada y enfocada.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>¿Por qué usarlo?</h2>
+          <div class="features">
+            <div class="feature">
+              <span>🎯 Entorno dedicado</span>
+              Menos distracciones que el navegador tradicional.
+            </div>
+            <div class="feature">
+              <span>🪟 Todo en uno</span>
+              Juego y utilidades en una sola ventana.
+            </div>
+            <div class="feature">
+              <span>🎵 Spotify integrado</span>
+              Música sin abrir pestañas extra.
+            </div>
+            <div class="feature">
+              <span>👕 Camisetas integradas</span>
+              Elegí camisetas sin salir de la sala.
+            </div>
+            <div class="feature">
+              <span>🔗 Ingreso por link</span>
+              Entrá a salas pegando el enlace.
+            </div>
+            <div class="feature">
+              <span>📈 Experiencia más fluida</span>
+              Uso más estable y consistente en sesiones largas.
+            </div>
+          </div>
+        </div>
+
+        <div class="download">
+          <a href="UHL%20Client%20setup%201.0.0.exe" download>
+            ⬇ Descargar UHL Client
+          </a>
+          <div class="note">
+            Disponible solo para PC · Sin anuncios · Versión BETA
+          </div>
+        </div>
+
+        <footer>
+          © Ultimate HaxBall League — Cliente oficial
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
